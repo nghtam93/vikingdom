@@ -962,12 +962,12 @@ strong {
   100% {
     transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg); } }
 .confetti__wrap {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background: #ffffff;
-  border: 1px solid white;
-  display: fixed;
-  top: 0px; }
+  position: absolute;
+  top: 0px;
+  left: 0;
+  overflow: hidden; }
 
 .confetti-container {
   perspective: 700px;
@@ -989,97 +989,6 @@ strong {
     animation: confetti-medium 1.75s linear 1 forwards; }
   .confetti--animation-fast {
     animation: confetti-fast 1.25s linear 1 forwards; }
-
-/**/
-.page__header {
-  position: relative;
-  padding: 80px 0 60px; }
-  .page__header .container {
-    position: relative;
-    z-index: 1; }
-  .page__header .page-title {
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 38px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #FBB332; }
-  .page__header .entry-title {
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 50px;
-    text-align: center;
-    color: #6DC5D3;
-    margin-bottom: 16px; }
-  @media (max-width: 991px) {
-    .page__header .entry-title {
-      font-size: 36px;
-      line-height: 46px; } }
-  @media (max-width: 767px) {
-    .page__header .entry-title {
-      font-size: 30px;
-      line-height: 40px; } }
-  @media (max-width: 575px) {
-    .page__header {
-      padding: 24px 0; }
-      .page__header .entry-title {
-        font-size: 20px;
-        line-height: 28px; }
-      .page__header .dnfix__thumb {
-        margin-bottom: 32px; } }
-
-.dn__breadcrumb {
-  margin-top: 24px;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px; }
-  .dn__breadcrumb a, .dn__breadcrumb span {
-    color: #7B7D7D; }
-
-/*widget*/
-.widget__fix {
-  position: sticky;
-  top: 70px;
-  padding-bottom: 10px; }
-
-@media (min-width: 992px) {
-  .admin-bar .widget__fix {
-    top: 100px; } }
-
-.widget-title {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 34px;
-  color: #192651;
-  border-left: 4px solid #E54A35;
-  padding-left: 8px;
-  margin-bottom: 30px; }
-
-/*404*/
-.search-no-results .page__header__title {
-  text-align: center; }
-
-.box-search {
-  max-width: 550px;
-  margin: auto; }
-
-.box-search form {
-  position: relative; }
-
-.box-search .search-field {
-  height: 48px;
-  border-radius: 8px; }
-
-.box-search .search-submit {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 0;
-  height: 48px;
-  width: 100px;
-  border-radius: 0 8px 8px 0;
-  color: #fff;
-  font-size: 16px; }
 
 .js-simpleParallax {
   position: absolute;
