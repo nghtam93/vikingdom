@@ -218,10 +218,15 @@
     background-attachment: fixed;
 }
 @supports (-webkit-overflow-scrolling: touch) {
+
+}
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
   .-bg-fix {
   background-attachment: scroll;
   }
 }
+
 //
 .js-simpleParallax{
     position: absolute;

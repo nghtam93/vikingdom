@@ -208,17 +208,17 @@
             background: linear-gradient(
         179.81deg, rgba(48,76,155,0) 31.51%, #0f0f0f 49.31%, rgba(15, 15, 15, .8) 77.28%, rgba(46,20,64,0) 99.83%);
         }
-        // &__bg{
-        //     position: fixed;
-        //     top: 0;
-        //     left: 0;
-        //     right: 0;
-        //     bottom: 0;
-        //     background: url(../img/home-roadmap-bg.png) no-repeat;
-        //     background-color: #0F0F0F;
-        //     background-size: cover;
-        //     z-index: -1;
-        // }
+        &__bg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url(../img/home-roadmap-bg.png) no-repeat;
+            background-color: #0F0F0F;
+            background-size: cover;
+            z-index: -1;
+        }
 
         .ic-star{
             position: absolute;
