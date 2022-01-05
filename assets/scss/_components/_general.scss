@@ -1,6 +1,7 @@
 
 .sc__header{
     position: relative;
+    z-index: 1;
     margin: 0 0 64px;
     .el__line{
         position: relative;
@@ -213,7 +214,14 @@
 //     z-index: 0;
 // }
 
-
+.-bg-fix{
+    background-attachment: fixed;
+}
+@supports (-webkit-overflow-scrolling: touch) {
+  .-bg-fix {
+  background-attachment: scroll;
+  }
+}
 //
 .js-simpleParallax{
     position: absolute;

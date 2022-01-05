@@ -6,6 +6,7 @@
         padding-top: 39.5%;
     }
     &-5img{
+        background-color: #0F0F0F;
         .container{
             max-width: 1064px;
         }
@@ -24,6 +25,7 @@
     }
     &-download{
         padding: 100px 0 76px;
+        background-color: #0F0F0F;
         .el__item{
             margin-bottom: 24px;
             -webkit-mask-image: url(../img/mask-download.png);
@@ -58,8 +60,22 @@
     &-characters{
         position: relative;
         padding: 100px 0;
-        background: url(../img/home-characters-bg.png) no-repeat;
+        background-color: #0F0F0F;
+        background-image: url(../img/home-characters-bg.png);
+        background-repeat: no-repeat;
         background-size: cover;
+        // &__bg{
+        //     position: fixed;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     background-image: url(../img/home-characters-bg.png);
+        //     background-repeat: no-repeat;
+        //     background-color: #0F0F0F;
+        //     background-size: cover;
+        //     z-index: -1;
+        // }
         .el__box + .el__box{margin-top: 150px;}
         .slider__item__wrap{
             min-width: 212px;
@@ -147,6 +163,7 @@
 
     &-how{
         padding: 100px 0;
+        background-color: #0F0F0F;
         .sc__header{
             margin-bottom: 40px;
         }
@@ -162,7 +179,8 @@
 
     &-roadmap{
         position: relative;
-        background: url(../img/home-roadmap-bg.png) no-repeat;
+        background-image: url(../img/home-roadmap-bg.png);
+        background-repeat: no-repeat;
         background-size: cover;
         background-repeat: no-repeat;
         &:before{
@@ -172,13 +190,35 @@
             right: 30px;
             width: 26.8%;
             height: 762px;
-            background: url(../img/home-roadmap-hero.png);
+            background-image: url(../img/home-roadmap-hero.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: bottom right;
             pointer-events:none;
             z-index: 1;
         }
+        &:after {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            pointer-events: none;
+            background: linear-gradient(
+        179.81deg, rgba(48,76,155,0) 31.51%, #0f0f0f 49.31%, rgba(15, 15, 15, .8) 77.28%, rgba(46,20,64,0) 99.83%);
+        }
+        // &__bg{
+        //     position: fixed;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     background: url(../img/home-roadmap-bg.png) no-repeat;
+        //     background-color: #0F0F0F;
+        //     background-size: cover;
+        //     z-index: -1;
+        // }
 
         .ic-star{
             position: absolute;
@@ -262,7 +302,19 @@
     }
 
     &-token{
+        position: relative;
         padding: 0 0 100px;
+        &:after {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            pointer-events: none;
+            background: linear-gradient(
+        179.81deg, rgba(48,76,155,0) 31.51%, #0f0f0f 49.31%, rgba(15, 15, 15, .8) 77.28%, rgba(46,20,64,0) 99.83%);
+        }
         .sc-content{
             max-width: 1067px;
             margin: 0 auto;
@@ -418,7 +470,8 @@
     &-ecosystem{
         position: relative;
         padding: 100px 0 76px;
-        background: url(../img/home-ecosystem-bg.png) no-repeat;
+        background-image: url(../img/home-ecosystem-bg.png);
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         &:before{
@@ -673,3 +726,4 @@
         }
     }
 }
+

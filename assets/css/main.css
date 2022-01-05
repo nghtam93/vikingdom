@@ -796,6 +796,7 @@ strong {
     display: block; } }
 .sc__header {
   position: relative;
+  z-index: 1;
   margin: 0 0 64px; }
   .sc__header .el__line {
     position: relative;
@@ -990,6 +991,12 @@ strong {
   .confetti--animation-fast {
     animation: confetti-fast 1.25s linear 1 forwards; }
 
+.-bg-fix {
+  background-attachment: fixed; }
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .-bg-fix {
+    background-attachment: scroll; } }
 .js-simpleParallax {
   position: absolute;
   top: 0;
@@ -1002,18 +1009,21 @@ strong {
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 39.5%; }
-.home-5img .container {
-  max-width: 1064px; }
-.home-5img .row {
-  --bs-gutter-x: 60px; }
-.home-5img .el__item {
-  transition: all .5s; }
-  .home-5img .el__item .dnfix__thumb {
-    padding-top: 119%; }
-  .home-5img .el__item:hover {
-    transform: translateY(-5px); }
+.home-5img {
+  background-color: #0F0F0F; }
+  .home-5img .container {
+    max-width: 1064px; }
+  .home-5img .row {
+    --bs-gutter-x: 60px; }
+  .home-5img .el__item {
+    transition: all .5s; }
+    .home-5img .el__item .dnfix__thumb {
+      padding-top: 119%; }
+    .home-5img .el__item:hover {
+      transform: translateY(-5px); }
 .home-download {
-  padding: 100px 0 76px; }
+  padding: 100px 0 76px;
+  background-color: #0F0F0F; }
   .home-download .el__item {
     margin-bottom: 24px;
     -webkit-mask-image: url(../img/mask-download.png);
@@ -1041,7 +1051,9 @@ strong {
 .home-characters {
   position: relative;
   padding: 100px 0;
-  background: url(../img/home-characters-bg.png) no-repeat;
+  background-color: #0F0F0F;
+  background-image: url(../img/home-characters-bg.png);
+  background-repeat: no-repeat;
   background-size: cover; }
   .home-characters .el__box + .el__box {
     margin-top: 150px; }
@@ -1109,7 +1121,8 @@ strong {
       line-height: 28px;
       color: #fff; }
 .home-how {
-  padding: 100px 0; }
+  padding: 100px 0;
+  background-color: #0F0F0F; }
   .home-how .sc__header {
     margin-bottom: 40px; }
   .home-how .el__item__excerpt {
@@ -1119,7 +1132,8 @@ strong {
     color: #FFFFFF; }
 .home-roadmap {
   position: relative;
-  background: url(../img/home-roadmap-bg.png) no-repeat;
+  background-image: url(../img/home-roadmap-bg.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-repeat: no-repeat; }
   .home-roadmap:before {
@@ -1129,12 +1143,21 @@ strong {
     right: 30px;
     width: 26.8%;
     height: 762px;
-    background: url(../img/home-roadmap-hero.png);
+    background-image: url(../img/home-roadmap-hero.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom right;
     pointer-events: none;
     z-index: 1; }
+  .home-roadmap:after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    background: linear-gradient(179.81deg, rgba(48, 76, 155, 0) 31.51%, #0f0f0f 49.31%, rgba(15, 15, 15, 0.8) 77.28%, rgba(46, 20, 64, 0) 99.83%); }
   .home-roadmap .ic-star {
     position: absolute;
     top: 30px;
@@ -1205,7 +1228,17 @@ strong {
         background-size: contain;
         pointer-events: none; }
 .home-token {
+  position: relative;
   padding: 0 0 100px; }
+  .home-token:after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    background: linear-gradient(179.81deg, rgba(48, 76, 155, 0) 31.51%, #0f0f0f 49.31%, rgba(15, 15, 15, 0.8) 77.28%, rgba(46, 20, 64, 0) 99.83%); }
   .home-token .sc-content {
     max-width: 1067px;
     margin: 0 auto; }
@@ -1351,7 +1384,8 @@ strong {
 .home-ecosystem {
   position: relative;
   padding: 100px 0 76px;
-  background: url(../img/home-ecosystem-bg.png) no-repeat;
+  background-image: url(../img/home-ecosystem-bg.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
   .home-ecosystem:before {
