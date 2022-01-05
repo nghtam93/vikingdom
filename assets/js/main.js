@@ -1,0 +1,140 @@
+$(document).ready(function(){
+
+    function isEmpty( el ){
+          return !$.trim(el.html())
+      }
+
+    new WOW().init();
+
+    /*----Get Header Height ---*/
+    function get_header_height() {
+        var header_sticky=$("header").outerHeight()
+        $('body').css("--header-height",header_sticky+'px')
+    }
+
+    setTimeout(function(){
+        get_header_height()
+    }, 500);
+
+    $( window ).resize(function() {
+      get_header_height()
+    });
+
+
+    /*----Back to top---*/
+    var back_to_top=$(".back-to-top"),offset=220,duration=500;$(window).scroll(function(){$(this).scrollTop()>offset?back_to_top.addClass("active"):back_to_top.removeClass("active")}),$(document).on("click",".back-to-top",function(o){return o.preventDefault(),$("html, body").animate({scrollTop:0},duration),!1});
+
+     //-------------------------------------------------
+    // Menu
+    //-------------------------------------------------
+    $.fn.dnmenu = function( options ) {
+
+        let thiz = this
+        let menu = $(this).attr('data-id')
+        let menu_id = '#'+menu
+
+        // Default options
+        var settings = $.extend({
+            name: 'Menu'
+        }, options );
+
+        // get ScrollBar Width
+        function getScrollBarWidth () {
+            var $outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll'}).appendTo('body'),
+                widthWithScroll = $('<div>').css({width: '100%'}).appendTo($outer).outerWidth();
+            $outer.remove();
+            return 100 - widthWithScroll;
+        };
+        let ScrollBarWidth = getScrollBarWidth() + 'px';
+
+        // Create wrap
+        // Button click
+        thiz.click(function(e){
+            e.preventDefault()
+            console.log(thiz)
+            if(thiz.hasClass('active')){
+                // $('.dnmenu-backdrop').remove()
+                $('body').removeClass('modal-open').css("padding-right","")
+                $(menu_id).removeClass('active')
+                $(thiz).removeClass('active')
+
+            } else {
+                // $('<div class="dnmenu-backdrop">').appendTo('body')
+                // $('body').addClass('modal-open').css("padding-right",ScrollBarWidth)
+                $(menu_id).addClass('active')
+                $(thiz).addClass('active')
+
+            }
+        });
+        // Apply options
+        return;
+    };
+
+    $('.menu-mb__btn').dnmenu()
+
+
+    //check home
+    if($('body').hasClass( "home" )){
+
+        // var images = document.querySelectorAll('.js-simpleParallax');
+        // new simpleParallax(images, {
+        //     delay: 0,
+        //     orientation: 'down',
+        //     scale: 1.5,
+        // });
+
+        // const Confettiful = function(el) {
+        //   this.el = el;
+        //   this.containerEl = null;
+
+        //   this.confettiFrequency = 3;
+        //   this.confettiColors = ['#EF2964', '#00C09D', '#2D87B0', '#48485E','#EFFF1D'];
+        //   this.confettiAnimations = ['slow', 'medium', 'fast'];
+
+        //   this._setupElements();
+        //   this._renderConfetti();
+        // };
+
+        // Confettiful.prototype._setupElements = function() {
+        //   const containerEl = document.createElement('div');
+        //   const elPosition = this.el.style.position;
+
+        //   if (elPosition !== 'relative' || elPosition !== 'absolute') {
+        //     this.el.style.position = 'relative';
+        //   }
+
+        //   containerEl.classList.add('confetti-container');
+
+        //   this.el.appendChild(containerEl);
+
+        //   this.containerEl = containerEl;
+        // };
+
+        // Confettiful.prototype._renderConfetti = function() {
+        //   this.confettiInterval = setInterval(() => {
+        //     const confettiEl = document.createElement('div');
+        //     const confettiSize = (Math.floor(Math.random() * 3) + 7) + 'px';
+        //     const confettiBackground = this.confettiColors[Math.floor(Math.random() * this.confettiColors.length)];
+        //     const confettiLeft = (Math.floor(Math.random() * this.el.offsetWidth)) + 'px';
+        //     const confettiAnimation = this.confettiAnimations[Math.floor(Math.random() * this.confettiAnimations.length)];
+
+        //     confettiEl.classList.add('confetti', 'confetti--animation-' + confettiAnimation);
+        //     confettiEl.style.left = confettiLeft;
+        //     confettiEl.style.width = confettiSize;
+        //     confettiEl.style.height = confettiSize;
+        //     confettiEl.style.backgroundColor = confettiBackground;
+
+        //     confettiEl.removeTimeout = setTimeout(function() {
+        //       confettiEl.parentNode.removeChild(confettiEl);
+        //     }, 3000);
+
+        //     this.containerEl.appendChild(confettiEl);
+        //   }, 25);
+        // };
+
+        // window.confettiful = new Confettiful(document.querySelector('.confetti__wrap'));
+
+    }
+});
+
+
