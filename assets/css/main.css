@@ -549,6 +549,9 @@ strong {
     .footer .copyright {
       padding: 18px 0; } }
   @media (max-width: 575px) {
+    .footer .copyright {
+      padding: 14px 0;
+      font-size: 14px; }
     .footer .footer__wrap {
       padding: 60px 0 32px; }
     .footer__logo {
@@ -1245,6 +1248,11 @@ strong {
     animation-delay: 0.5s; }
   .home-roadmap .-delay-3 {
     animation-delay: 1s; }
+  .home-roadmap .roadmap__slider:after {
+    content: 'flickity';
+    display: none; }
+  .home-roadmap .slider__item__wrap {
+    min-width: 295px; }
   .home-roadmap .el__item {
     width: 100%;
     padding: 70px 18px 18px;
@@ -1558,20 +1566,36 @@ strong {
   .home-token {
     padding: 0 0 60px; }
   .home-ecosystem {
-    padding: 60px 0 46px; }
+    padding: 60px 0 36px; }
   .home-roadmap .el__item {
     margin-bottom: 60px; }
   .home-roadmap .el__item__title {
     font-size: 28px;
     padding: 10px 10px; } }
+@media (max-width: 767px) {
+  .home-roadmap .slider__item__wrap {
+    padding: 24px 0;
+    width: 306px;
+    min-height: 100%;
+    display: flex;
+    margin-right: 16px; } }
 @media (max-width: 575px) {
   .home-download {
     padding: 32px 0 6px; }
     .home-download .el__item__meta {
       font-size: 16px;
       line-height: 26px; }
+  .home-characters {
+    padding: 60px 0 0px; }
+    .home-characters .el__box + .el__box {
+      margin-top: 90px; }
+  .home-roadmap .sc__header {
+    margin: 0 auto 50px; }
   .home-token .el__excerpt {
     font-size: 14px;
     line-height: 22px; } }
+@media screen and (min-width: 768px) {
+  .home .roadmap__slider:after {
+    content: ''; } }
 
 /*# sourceMappingURL=main.css.map */
