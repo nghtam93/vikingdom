@@ -1313,7 +1313,6 @@ strong {
     margin-bottom: var(--bs-gutter-x); }
     .home-team .el__item__thumb {
       position: relative;
-      padding: 1px;
       -webkit-mask-image: url(../img/mask-team.png);
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-size: 100% 100%; }
