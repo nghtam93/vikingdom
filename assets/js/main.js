@@ -76,12 +76,6 @@ $(document).ready(function(){
     //check home
     if($('body').hasClass( "home" )){
 
-        var images = document.querySelectorAll('.js-simpleParallax');
-        new simpleParallax(images, {
-            delay: 0,
-            orientation: 'down',
-            scale: 1.5,
-        });
     }
 });
 
