@@ -51,7 +51,6 @@ $(document).ready(function(){
         // Button click
         thiz.click(function(e){
             e.preventDefault()
-            console.log(thiz)
             if(thiz.hasClass('active')){
                 // $('.dnmenu-backdrop').remove()
                 $('body').removeClass('modal-open').css("padding-right","")
