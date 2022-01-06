@@ -974,7 +974,8 @@ strong {
   position: absolute;
   top: 0px;
   left: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  pointer-events: none; }
 
 .confetti-container {
   perspective: 700px;
