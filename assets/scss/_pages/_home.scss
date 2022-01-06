@@ -317,7 +317,7 @@
         }
         .el__thumb{
             position: relative;
-            animation: lightAnimation 40s linear infinite;
+            animation: lightAnimation 2s linear infinite;
             .dnfix__thumb{
                 padding-top: 88.5%;
             }
@@ -334,8 +334,8 @@
                 background-position: center;
                 z-index: -1;
                 pointer-events: none;
-                -webkit-animation: 5s linear infinite spinner-border;
-                animation: 5s linear infinite spinner-border;
+                -webkit-animation: 40s linear infinite spinner-border;
+                animation: 40s linear infinite spinner-border;
             }
         }
         .el__excerpt{

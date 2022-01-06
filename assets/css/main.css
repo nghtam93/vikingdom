@@ -1264,7 +1264,7 @@ strong {
     margin: 0 auto; }
   .home-token .el__thumb {
     position: relative;
-    animation: lightAnimation 40s linear infinite; }
+    animation: lightAnimation 2s linear infinite; }
     .home-token .el__thumb .dnfix__thumb {
       padding-top: 88.5%; }
     .home-token .el__thumb:before {
@@ -1280,8 +1280,8 @@ strong {
       background-position: center;
       z-index: -1;
       pointer-events: none;
-      -webkit-animation: 5s linear infinite spinner-border;
-      animation: 5s linear infinite spinner-border; }
+      -webkit-animation: 40s linear infinite spinner-border;
+      animation: 40s linear infinite spinner-border; }
   .home-token .el__excerpt {
     margin-top: 64px;
     font-weight: normal;
