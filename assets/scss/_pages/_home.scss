@@ -198,7 +198,7 @@
             background-position: bottom right;
             pointer-events:none;
             z-index: 1;
-            animation: lightAnimation 2s linear infinite;
+            animation: lightAnimation 1s linear infinite;
         }
         &:after {
             content: '';
@@ -482,7 +482,7 @@
             background-size: contain;
             background-position: bottom left;
             pointer-events: none;
-            animation: lightAnimation 2s linear infinite;
+            animation: lightAnimation 1s linear infinite;
         }
         .el__item{
             margin-bottom: var(--bs-gutter-x);
@@ -545,6 +545,11 @@
                 .dnfix__thumb {
                     margin-bottom: 15px;
                 }
+            }
+        }
+        &-team{
+            .el__item .dnfix__thumb {
+                padding-top: 69.61%;
             }
         }
     }
